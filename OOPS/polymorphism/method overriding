@@ -1,0 +1,14 @@
+ class class_A
+    {
+      public virtual void method_over_riding()
+        {
+
+        }
+    }
+    class class_b
+    {
+        public override method_over_riding()
+        {
+
+        }
+    }
