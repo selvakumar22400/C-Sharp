@@ -65,7 +65,7 @@ base.Print();
 
 //https://www.knowledgehut.com/tutorials/csharp/csharp-abstraction
 
-ABSTRACTION :  
+ABSTRACT :  
           =>It means that only the required information is visible to the user and the rest of the information is hidden.
           =>Abstract classes are base classes with partial implementation.
           =>These classes contain abstract methods that are inherited by other classes that provide more functionality.
@@ -226,3 +226,48 @@ Name = Bruce
 Marks = 98.5
 
 ...............................................................................................................................................................................
+
+CLASSES:
+       
+       
+      =>   Static class: Static class, defined by the keyword ‘static’ does not allow inheritance. Therefore, you cannot create an object for a static class.
+      
+static class classname  
+{  
+  //static data members  
+  //static methods  
+}
+
+     =>   Partial class: 
+              => Partial class, defined by the keyword ‘partial’ allows its members to partially divide or share source (.cs) files.
+              => physically separated ,logicaly grouped.
+               
+               
+
+     =>   Abstract class:
+                => you cannot create objects
+                => Abstract classes work on the OOPS concept of abstraction.
+                => Abstraction helps to extract essential details and hide the unessential ones.
+                
+
+     =>   Sealed class: 
+              =>Sealed classes are classes that cannot be inherited
+              =>Use the keyword sealed to restrict access to users to inherit that class. 
+              
+sealed class classname
+{
+   // data members
+   // methods
+   .
+   .
+   .
+}
+
+................................................................................................................................................................................
+
+INHERITENS:
+          => inherite the base class features in derivied class
+          
+          
+          
+
