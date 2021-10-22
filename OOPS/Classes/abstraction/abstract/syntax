@@ -4,14 +4,20 @@ namespace OOPS__polymorpism_inheritantes_abstraction
 {
     class Program
     {
-       abstract class A
+       abstract class A // perent class
         {
-            public abstract void method_over_riding();
+            public abstract void method_over_riding(); //abstract method
 
-            
+
+            public virtual void normalmethod()  //non abstract method
+            {
+
+            }
+
+
         }
 
-        abstract class B : A
+        abstract class B : A   //child class
         {
             public override void method_over_riding()
             {
