@@ -1,0 +1,31 @@
+using System;
+
+namespace OOPS__polymorpism_inheritantes_abstraction
+{
+    class Program
+    {
+       abstract class A
+        {
+            public abstract void method_over_riding();
+
+            
+        }
+
+        abstract class B : A
+        {
+            public override void method_over_riding()
+            {
+                Console.WriteLine("succsses");
+            }
+
+            
+
+        }
+        static void Main(string[] args)
+        {
+            class_A abstrsct_methods = new class_A();
+            abstrsct_methods.method_over_riding();
+
+        }
+    }
+}
