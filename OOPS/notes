@@ -1,0 +1,57 @@
+polymorpism :
+
+method overloading;
+
+        => Creating more than one method or a function that has a same name but different signatures or parameters in the same class is called method overloading.
+           
+      *Key points
+
+          =>Method overloading is also called  // early binding or compile time polymorphism  // or static binding.
+          =>The compiler automatically calls the required method or the function by checking number of parameters and their type, which are passed into that method.
+          =>If the number of parameters and type doesn't match by any method signatures, then it will give the compile time error.
+          =>We can achive method overloading by changing the number of parameters used or by using different types of parameters or by changing the order of parameters
+
+
+method overriding:
+  
+       => method overriding means having two methoods with same name and same parameter ,one method in the base class another one in the dirivied class  
+       
+       *Key points
+
+          => Method overriding is also called run time polymorphism or dynamic polymorphism or late binding.
+          => We can override a method in the base class by creating similar function in the derived class. This can be achieved by using inheritance and using virtual & override.
+          => Same signature means the methods must have the same name, same number of arguments and same type of arguments.
+          => Method overriding is possible only in the derived classes, but not within the same class.
+          => When the derived class needs a method with the same signature as in the base class, but wants to execute different code than the one provided by the base class then method overriding will be used.
+          => Method overriding in C# is a feature like the virtual function in C++.
+          
+          
+          
+          
+          ---------Important keywords in method overriding-------------
+
+===========>Virtual keyword
+  
+If we use Virtual keyword, then we tell to compiler that this method can be overridden by the derived classes.
+
+public virtual int Print()  
+{  
+   //Implementation of Print method in Base class  
+} 
+
+
+ ============>Override keyword
+ 
+If we use Overrride keyword, then we tell to the compiler that this method is overriding the same named method in the base class.
+
+public override int Print()  
+{  
+   //Implementation of Print method in Derived class  
+}  
+
+
+ ============>Base keyword
+ 
+If we use base keyword, then we tell to the compiler that this method calls the base class method for overriding functionality.
+
+base.Print();  
