@@ -57,3 +57,94 @@ If we use base keyword, then we tell to the compiler that this method calls the 
 base.Print();  
 
 //https://www.c-sharpcorner.com/blogs/difference-between-method-overloading-and-method-overriding
+
+
+..............................................................................................................................................................................
+
+
+
+
+ABSTRACTION :  
+          =>It means that only the required information is visible to the user and the rest of the information is hidden.
+          =>Abstract classes are base classes with partial implementation.
+          =>These classes contain abstract methods that are inherited by other classes that provide more functionality.
+          
+      abstract class containes two type of methods
+          1.abstract method 
+          2.non abstract method 
+
+
+      Some of the salient points about abstract classes are as follows:
+
+                =>The abstract class is created using the keyword abstract and some of the methods of the abstract class also contain the keyword abstract.
+                =>No object can be created of the abstract class i.e.it cannot be instantiated.
+                =>The abstract methods in the abstract class are implemented actually only in the derived classes.
+                =>If all the methods in the abstract class contain the keyword abstract, then that class is known as pure Abstract class.
+                
+                
+                
+                
+using System;
+namespace AbstractionDemo
+{
+   abstract class Shape               //base class
+   {
+     public abstract double area();   //abstract method
+   }
+   
+   class Circle: Shape                //derivied class 1
+   {
+     private double radius;           //defined the variable
+     public Circle( double r)         //parameter constractor
+     {
+        radius = r;
+     }
+     public override double area ()   //override the base class method 
+     {
+        return (3.14*radius*radius);
+     }
+   }
+   class Square: Shape                //derived class 2
+   {
+     private double side;
+     public Square( double s)         // parameter constractor
+     {
+        side = s;
+     }
+     public override double area ()   //override the base class method 
+     {
+        return (side*side);
+     }
+   }
+    class Triangle: Shape                   //derived class 3
+   {
+     private double tbase;
+     private double theight;
+     public Triangle( double b, double h)  // parameter constractor
+     {
+        tbase = b;
+        theight = h;
+     }
+     public override double area ()       // override the base class method 
+     {
+        return (0.5*tbase*theight);
+     }
+  }
+   class Test
+   {
+     static void Main(string[] args)
+     {
+        Circle c = new Circle(5.0);
+        Console.WriteLine("Area of Circle = {0}", c.area());
+        Square s = new Square(2.5);
+        Console.WriteLine("Area of Square = {0}", s.area());
+        Triangle t = new Triangle(2.0, 5.0);
+        Console.WriteLine("Area of Triangle = {0}", t.area());
+     }
+   }
+}
+The output of the above program is as follows:
+
+Area of Circle = 78.5
+Area of Square = 6.25
+Area of Triangle = 5
