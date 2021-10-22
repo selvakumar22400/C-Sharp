@@ -1,0 +1,73 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace OOPS__polymorpism_inheritantes_abstraction
+{
+    class polymarpism
+    {
+        public void same_method_name()  //defualt method |non return type
+        {
+
+        }
+        public void same_method_name(int num) //parameter method |non return type
+        {
+            int a = num;
+
+        }
+        public void same_method_name(int num,int num2) //same method name & differant number of  parameter
+        {
+            int a = num;
+            int b = num2;
+
+        }
+
+        string name;
+        public void same_method_name(int num, string name) //same method name & &differant number of  parameter
+        {
+           int a = num;
+           this.name = name;
+
+        }
+        public string return_data(string name)
+        {
+            return ("hi "+name);
+        }
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+using System;
+
+namespace OOPS__polymorpism_inheritantes_abstraction
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+            polymarpism method_overloading = new polymarpism();
+            method_overloading.same_method_name();
+            method_overloading.same_method_name(10);
+            method_overloading.same_method_name(10, 20);
+            method_overloading.same_method_name(10,"selvakumar");
+            //deference b/w non return type & return type
+            Console.WriteLine(method_overloading.same_method_name(10, "selvakumar"));//error occered, In non return type we cant write console.wrireline 
+
+           Console.WriteLine( method_overloading.return_data("selva"));//no error because which is return type
+
+        }
+    }
+}
+
+        
+        
+        
+        
+        
+        
+        
+
+
+    }
+}
