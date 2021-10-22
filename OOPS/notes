@@ -1,4 +1,5 @@
 polymorpism :   same method giving multiple meaning 
+//https://www.c-sharpcorner.com/blogs/difference-between-method-overloading-and-method-overriding
 
 method overloading;
 
@@ -62,7 +63,7 @@ base.Print();
 ..............................................................................................................................................................................
 
 
-
+//https://www.knowledgehut.com/tutorials/csharp/csharp-abstraction
 
 ABSTRACTION :  
           =>It means that only the required information is visible to the user and the rest of the information is hidden.
@@ -148,3 +149,80 @@ The output of the above program is as follows:
 Area of Circle = 78.5
 Area of Square = 6.25
 Area of Triangle = 5
+
+
+//https://www.knowledgehut.com/tutorials/csharp/csharp-abstraction
+
+
+................................................................................................................................................................................
+
+
+INTERFACE :
+           =>The interface members are only declared in the interface and they need to be defined in the class that derives them.
+
+           =>Interfaces are quite useful when a class needs to inherit functionalities from multiple sources as multiple inheritance is not allowed in C#.
+           
+           
+   NOTE : The keyword interface is used for interface definition. The interface names begin with a capital I because of convention.
+
+interface Iinterface_name
+{
+     // interface body
+}
+
+
+EXAMPLE:
+
+using System;
+namespace InterfaceDemo
+{
+   public interface IStudent
+   {
+     void putData();
+   }
+   public class Student: IStudent
+   {
+       private int rno;
+       private string name;
+       private double marks;
+       public Student(int r, string n, double m)
+       {
+           rno = r;
+           name = n;
+           marks = m;
+       }
+       public void putData()
+       {
+           Console.WriteLine("Roll Number = {0}", rno);
+           Console.WriteLine("Name = {0}", name);
+           Console.WriteLine("Marks = {0}", marks);
+           Console.WriteLine();
+       }
+   }
+   class Test
+   {
+     static void Main(string[] args)
+     {
+        Student s1 = new Student(1, "John", 78.5);
+        Student s2 = new Student(2, "Sara", 60.0);
+        Student s3 = new Student(3, "Bruce", 98.5);
+        s1.putData();
+        s2.putData();
+        s3.putData();
+     }
+   }
+}
+
+Roll Number = 1
+Name = John
+Marks = 78.5
+
+Roll Number = 2
+Name = Sara
+Marks = 60
+
+Roll Number = 3
+Name = Bruce
+Marks = 98.5
+
+...............................................................................................................................................................................
