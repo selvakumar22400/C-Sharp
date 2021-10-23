@@ -1,3 +1,20 @@
+topics  : 
+        *polymorpism
+          method overloading
+          method overriding
+          
+        *ABSTRACTION
+          ABSTRACT
+          INTERFACE
+          
+        *CLASS
+          static class
+          sealed class
+          partial class
+          abstract class
+          
+           
+
 polymorpism :   same method giving multiple meaning 
 //https://www.c-sharpcorner.com/blogs/difference-between-method-overloading-and-method-overriding
 
