@@ -36,7 +36,7 @@ method overriding:
        
        *Key points
 
-          => Method overriding is also called run time polymorphism or dynamic polymorphism or late binding.
+          => Method overriding is also called // run time polymorphism or dynamic polymorphism  or late binding //.
           => We can override a method in the base class by creating similar function in the derived class. This can be achieved by using inheritance and using virtual & override.
           => Same signature means the methods must have the same name, same number of arguments and same type of arguments.
           => Method overriding is possible only in the derived classes, but not within the same class.
