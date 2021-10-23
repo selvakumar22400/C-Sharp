@@ -8,6 +8,7 @@ topics  :
           INTERFACE
           
         *CLASS
+          properties
           static class
           sealed class
           partial class
@@ -245,15 +246,92 @@ Marks = 98.5
 ...............................................................................................................................................................................
 
 CLASSES:
+
+    PROPERTIES:
+    
+              => C# Properites doesn't have storage location. C# Properites are extension of fields and accessed like fields.
+
+              => The Properties have accessors that are used to set, get or compute their values.
+
+              Usage of C# Properties
+                    => C# Properties can be read-only or write-only.
+                    => We can have logic while setting values in the C# Properties.
+                    => We make fields of the class private, so that fields can't be accessed from outside the class directly. Now we are forced to use C# properties for setting or getting values.
+          
+          
+              C# Properties Example
+              
+                            using System;  
+                               public class Employee  
+                                {  
+                                    private string name;  
+
+                                    public string Name  
+                                    {  
+                                        get  
+                                        {  
+                                            return name;  
+                                        }  
+                                        set  
+                                        {  
+                                            name = value;  
+                                        }  
+                                    }  
+                               }  
+                               class TestEmployee{  
+                                   public static void Main(string[] args)  
+                                    {  
+                                        Employee e1 = new Employee();  
+                                        e1.Name = "Sonoo Jaiswal";  
+                                        Console.WriteLine("Employee Name: " + e1.Name);  
+
+                                    }  
+                                }  
+                            Output:
+
+                            Employee Name: Sonoo Jaiswal
+                            
+                                    
+                Properties Example 2: having logic while setting value
+                
+                               using System;  
+                               public class Employee  
+                                {  
+                                    private string name;  
+
+                                    public string Name  
+                                    {  
+                                        get  
+                                        {  
+                                            return name;  
+                                        }  
+                                        set  
+                                        {  
+                                            name = value;  
+                                        }  
+                                    }  
+                               }  
+                               class TestEmployee{  
+                                   public static void Main(string[] args)  
+                                    {  
+                                        Employee e1 = new Employee();  
+                                        e1.Name = "Sonoo Jaiswal";  
+                                        Console.WriteLine("Employee Name: " + e1.Name);  
+
+                                    }  
+                                }  
+                            Output:
+
+                            Employee Name: Sonoo Jaiswal
        
        
       =>   Static class: Static class, defined by the keyword ‘static’ does not allow inheritance. Therefore, you cannot create an object for a static class.
       
-static class classname  
-{  
-  //static data members  
-  //static methods  
-}
+              static class classname  
+              {  
+                //static data members  
+                //static methods  
+              }
 
      =>   Partial class: 
               => Partial class, defined by the keyword ‘partial’ allows its members to partially divide or share source (.cs) files.
@@ -271,20 +349,140 @@ static class classname
               =>Sealed classes are classes that cannot be inherited
               =>Use the keyword sealed to restrict access to users to inherit that class. 
               
-sealed class classname
-{
-   // data members
-   // methods
-   .
-   .
-   .
-}
+              sealed class classname
+              {
+                 // data members
+                 // methods
+                 .
+                 .
+                 .
+              }
 
 ................................................................................................................................................................................
 
 INHERITENS:
-          => inherite the base class features in derivied class
+          =>using the base class feature in derived class 
+         
+         
+          => Advantage of  Inheritance
+               Code reusability:
+                                Now you can reuse the members of your parent class. So, there is no need to define the member again. So less code is required in the class.
+                                
+ Single Level Inheritance
+           
+          =>  When one class inherits another class, it is known as single level inheritance. 
           
+             Example: Inheriting Fields
+           
+                               using System;  
+                               public class Employee  
+                                {  
+                                   public float salary = 40000;  
+                               }  
+                               public class Programmer: Employee  
+                               {  
+                                   public float bonus = 10000;  
+                               }  
+                               class TestInheritance{  
+                                   public static void Main(string[] args)  
+                                    {  
+                                        Programmer p1 = new Programmer();  
+
+                                        Console.WriteLine("Salary: " + p1.salary);  
+                                        Console.WriteLine("Bonus: " + p1.bonus);  
+
+                                    }  
+                                }
+    
+    
+          => Single Level Inheritance Example: Inheriting Methods
+     
+
+                               using System;  
+                               public class Animal  
+                                {  
+                                   public void eat() { Console.WriteLine("Eating..."); }  
+                               }  
+                               public class Dog: Animal  
+                               {  
+                                   public void bark() { Console.WriteLine("Barking..."); }  
+                               }  
+                               class TestInheritance2{  
+                                   public static void Main(string[] args)  
+                                    {  
+                                        Dog d1 = new Dog();  
+                                        d1.eat();  
+                                        d1.bark();  
+                                    }  
+                                }  
+                            Output:
+
+                            Eating...
+                            Barking...
+
+
+
+          =>Multi Level Inheritance Example
           
-          
+                                using System;  
+                               public class Animal  
+                                {  
+                                   public void eat() { Console.WriteLine("Eating..."); }  
+                               }  
+                               public class Dog: Animal  
+                               {  
+                                   public void bark() { Console.WriteLine("Barking..."); }  
+                               }  
+                               public class BabyDog : Dog  
+                               {  
+                                   public void weep() { Console.WriteLine("Weeping..."); }  
+                               }  
+                               class TestInheritance2{  
+                                   public static void Main(string[] args)  
+                                    {  
+                                        BabyDog d1 = new BabyDog();  
+                                        d1.eat();  
+                                        d1.bark();  
+                                        d1.weep();  
+                                    }  
+                                }  
+                            Output:
+
+                            Eating...
+                            Barking...
+                            Weeping...
+                            
+                            
+                            
+         =>Multiple Inheritance
+                   A class can also be derived from more than one base class, using a comma-separated list:
+
+                            Example
+                            // Base class
+                            class MyClass {
+                              public:
+                                void myFunction() {
+                                  cout << "Some content in parent class." ;
+                                }
+                            };
+
+                            // Another base class
+                            class MyOtherClass {
+                              public:
+                                void myOtherFunction() {
+                                  cout << "Some content in another class." ;
+                                }
+                            };
+
+                            // Derived class
+                            class MyChildClass: public MyClass, public MyOtherClass {
+                            };
+
+                            int main() {
+                              MyChildClass myObj;
+                              myObj.myFunction();
+                              myObj.myOtherFunction();
+                              return 0;
+                            }
+
 
