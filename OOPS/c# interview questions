@@ -1,0 +1,79 @@
+ What is Common Language Runtime (CLR)?
+      CLR handles program execution for various languages including C#. 
+      The architecture of CLR handles memory management, garbage collection, security handling
+      
+What is garbage collection in C#?
+      Garbage collection is the process of freeing up memory that is captured by unwanted objects.
+      When you create a class object, automatically some memory space is allocated to the object in the heap memory.
+      Now, after you perform all the actions on the object, the memory space occupied by the object becomes waste. 
+      It is necessary to free up memory  
+ 
+ What are indexers in C# .NET?   https://www.geeksforgeeks.org/c-sharp-indexers/
+      Indexers are known as smart arrays in C#. 
+      It allows the instances of a class to be indexed in the same way as an array.
+      
+      [access_modifier] [return_type] this [argument_list]
+      {
+        get 
+        {
+           // get block code
+        }
+        set 
+        {
+          // set block code
+        }
+
+      }
+      //it is simlier to the propertiy
+      
+What are the types of classes in C#?
+    Abstract class
+    Partial class
+    Sealed class
+    Static class      
+    
+What is the difference between C# abstract class and an interface?
+   absract    It contains both declaration and definition parts.
+              A class can only use one abstract class.
+              The performance of an abstract class is fast.
+
+   interface  It contains only a declaration part.
+              A class can use multiple interfaces.
+              The performance of the interface is slow
+              
+What are extension methods in C#?  https://www.geeksforgeeks.org/extension-method-in-c-sharp/
+   In C#, the extension method concept allows you to add new methods in the existing class  
+   
+    // Method 5
+    public static void M5(this Geek g, string str)
+    {
+        Console.WriteLine(str);
+    }
+    
+What is inheritance? Does C# support multiple inheritance?
+   c# inheritance allows using the perent class features in child class
+    
+    But C# does not support multiple class inheritance.
+    To overcome this problem we use interfaces to achieve multiple class inheritance.
+
+ What is a managed and unmanaged code?
+    Managed code lets you run the code on a managed CLR runtime environment in the .NET framework. 
+    Managed code runs on the managed runtime environment than the operating system itself. 
+    Benefits: Provides various services like a garbage collector, exception handling, etc. 
+
+    Unmanaged code is when the code doesn’t run on CLR, it is an unmanaged code that works outside the .NET framework. 
+    They don’t provide services of the high-level languages and therefore, run without them. Such an example is C++
+  
+what is enum ?
+    An enum is a special "class" that represents a group of constants (unchangeable/read-only variables).
+    To create an enum, use the enum keyword (instead of class or interface), and separate the enum items with a comma:  
+    You can access enum items with the dot syntax
+    enum Level 
+    {
+      Low,
+      Medium,
+      High
+    }
+    Level myVar = Level.Medium;
+    Console.WriteLine(myVar);
+
