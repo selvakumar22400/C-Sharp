@@ -76,4 +76,36 @@ what is enum ?
     }
     Level myVar = Level.Medium;
     Console.WriteLine(myVar);
+    
+Ref and Out?
+ The ref is a keyword in C# which is used for the passing the arguments by a reference. 
+ It is generally used when a method returns multiple values.
+ 
+ Boxing In C# and Unboxing In C#
 
+    The process of Converting a Value Type (char, int, etc.) to a Reference Type(object) is called Boxing.
+    Boxing is an implicit conversion process in which object type (supertype) is used.
+    The Value type is always stored in Stack. The Referenced Type is stored in Heap.
+
+    The process of converting the reference type into the value type is known as Unboxing.
+    It is an explicit conversion process.
+
+What are Properties in C#?
+   Properties are the special type of class members
+   that provides to read, write, or compute the value of a private field
+   Encapsulation and hiding of information can also be achieved using properties.
+   It uses pre-defined methods which are “get” and “set” methods which help to access and modify the properties.
+
+What are partial classes in C#?
+    A partial class is created by using a partial keyword.
+
+What is the difference between late binding and early binding in C#?
+   In this binding, the compiler already knows about what kind of object it is and what are the methods or properties it holds,
+   here the objects are static objects.
+   The performance of early binding is fast and it is easy to code.
+   It decreases the number of run-time errors.
+   
+   in late binding, the compiler does not know about what kind of object it is and what are the methods or properties it holds,
+   here the objects are dynamic objects
+   Basically, late binding is achieved by using virtual methods.
+   The performance of late binding is slower than early binding because it requires lookups at run-time
