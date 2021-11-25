@@ -108,4 +108,10 @@ What is the difference between late binding and early binding in C#?
    in late binding, the compiler does not know about what kind of object it is and what are the methods or properties it holds,
    here the objects are dynamic objects
    Basically, late binding is achieved by using virtual methods.
-   The performance of late binding is slower than early binding because it requires lookups at run-ti
+   The performance of late binding is slower than early binding because it requires lookups at run-time
+   
+structure
+   A structure is a collection of variables of different data types under a single unit. 
+   It is almost similar to a class because both are user-defined data types and both hold a bunch of different data types.
+    no need to create an instance using 'new' keyword
+       
