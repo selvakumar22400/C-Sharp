@@ -1,0 +1,2 @@
+Generic collection in C# is defined in System.Collection.Generic namespace.
+Non-Generic collection in C# is defined in System.Collections namespace. 
